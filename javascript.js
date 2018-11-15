@@ -22,8 +22,7 @@ function getReceipt() {
 	runningTotal = sizeTotal;
 	console.log(selectedSize+" = $"+sizeTotal+".00");
 	console.log("size text1: "+text1);
-	console.log("subtotal: $"+runningTotal+".00");
-	getMeat(runningTotal,text1); 
+	console.log("subtotal: $"+runningTotal+".00"); 
 };	
 
 function getCheese(runningTotal,text1) {
@@ -33,7 +32,7 @@ function getCheese(runningTotal,text1) {
 	for (var c = 0; c < cheeseArray.length; c++) {
 		if (cheeseArray[c].checked) {
 			selectedCheese.push(cheeseArray[j].value);
-			console.log("selected meat item: ("+cheeseArray[j].value+")");
+			console.log("selected cheese item: ("+cheeseArray[j].value+")");
 			text1 = text1+cheeseArray[c].value+"<br>";
 		}
 	}
@@ -44,7 +43,7 @@ function getCheese(runningTotal,text1) {
 		cheeseTotal = 0;
 	}
 	runningTotal = (runningTotal + cheeseTotal);
-	console.log("total selected meat items: "+cheeseCount);
+	console.log("total selected cheese items: "+cheeseCount);
 	console.log(cheeseCount+" cheese - 1 free cheese = "+"$"+cheeseTotal+".00");
 	console.log("cheese text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
@@ -70,7 +69,7 @@ function getCrust(runningTotal,text1) {
 		crustTotal = 0;
 	}
 	runningTotal = (runningTotal + crustTotal);
-	console.log("total selected meat items: "+crustCount);
+	console.log("total selected crust items: "+crustCount);
 	console.log(crustCount+" crust - 1 free crust = "+"$"+cheeseTotal+".00");
 	console.log("crust text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
@@ -108,7 +107,7 @@ function getSauce(runningTotal,text1) {
 function getMeat(runningTotal,text1) {
 	var meatTotal = 0;
 	var selectedMeat = [];
-	var meatArray = document.getElementsByClassName("meats");
+	var meatArray = document.getElementsByClassName("meat");
 	for (var j = 0; j < meatArray.length; j++) {
 		if (meatArray[j].checked) {
 			selectedMeat.push(meatArray[j].value);
