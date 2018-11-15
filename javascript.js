@@ -84,8 +84,8 @@ function getSauce(runningTotal,text1) {
 	for (var s = 0; s < sauceArray.length; s++) {
 		if (sauceArray[s].checked) {
 			selectedSauce.push(sauceArray[d].value);
-			console.log("selected crust item: ("+sauceArray[s].value+")");
-			text1 = text1+crustArray[s].value+"<br>";
+			console.log("selected sauce item: ("+sauceArray[s].value+")");
+			text1 = text1+sauceArray[s].value+"<br>";
 		}
 	}
 	var sauceCount = selectedSauce.length;
@@ -96,7 +96,7 @@ function getSauce(runningTotal,text1) {
 	}
 	runningTotal = (runningTotal + sauceTotal);
 	console.log("total selected sauce items: "+sauceCount);
-	console.log(sauceCount+" sauce - 1 free cheese = "+"$"+sauceTotal+".00");
+	console.log(sauceCount+" sauce - 1 free sauce = "+"$"+sauceTotal+".00");
 	console.log("sauce text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 	document.getElementById("showText").innerHTML=text1;
