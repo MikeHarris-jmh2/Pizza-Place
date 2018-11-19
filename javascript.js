@@ -173,4 +173,4 @@ function getVeggie(runningTotal, text1){
 	document.getElementById("showText").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>"
 	document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
 
-}
+};
